@@ -33,7 +33,7 @@ RUN git clone https://github.com/tmux/tmux.git --branch 2.0 --single-branch && \
 RUN mkdir /var/www/nZEDb/ && \
     cd /var/www/ && \
     git clone https://github.com/nZEDb/nZEDb.git
-RUN cd /var/www/nZEDb/ && composer install
+RUN cd /var/www/nZEDb/ && su www-data composer install
 RUN mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql
 RUN mkdir -p /var/www/nZEDb/resources/tmp/unrar 
 RUN chmod -R 777 /var/www/nZEDb/ && chown -R www-data:www-data /var/www/nZEDb/ && chmod -R 777 /var/lib/php/sessions
