@@ -2,3 +2,4 @@
 root/etc/s6-overlay/.DS_Store
 root/etc/.DS_Store
 root/.DS_Store
+tmp.Dockerfile
