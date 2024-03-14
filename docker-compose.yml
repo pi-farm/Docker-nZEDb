@@ -4,9 +4,11 @@ services:
         build: .
         stdin_open: true
         tty: true
-        volumes:
-            - ${PWD}/nzedb_data:/var/www/nZEDb
-            - ${PWD}/nzedb_db:/var/lib/mysql
+        ports:
+          - 8000:80
+#        volumes:
+#            - ${PWD}/nzedb_data:/var/www/nZEDb
+#            - ${PWD}/nzedb_db:/var/lib/mysql
         container_name: nzedb-container
         image: nzedb-image
 
